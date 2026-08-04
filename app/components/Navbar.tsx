@@ -1,27 +1,15 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  return (
+  return ( 
+    
     <>
-      {/* Top Bar */}
-      <div
-        style={{
-          background: "#0B2C59",
-          color: "white",
-          padding: "10px 40px",
-          display: "flex",
-          justifyContent: "space-between",
-          flexWrap: "wrap",
-          fontSize: "14px",
-        }}
-      >
-        <span>📞 +91 9111702111</span>
-        <span>✉ caprashantgupta18@gmail.com</span>
-        <span>🕙 Mon - Sat | 10 AM - 8 PM</span>
-      </div>
+    
+
 
       {/* Main Navbar */}
       <nav
@@ -37,21 +25,46 @@ export default function Navbar() {
           zIndex: 1000,
         }}
       >
-        <div>
-          <h2
+        <div
   style={{
-    color: "#123B73",
-    margin: 0,
-    fontSize: "28px",
+    display: "flex",
+    alignItems: "center",
+    gap: "20px",
   }}
 >
-            Prashant K Gupta & Associates
-          </h2>
+  <Image
+    src="/images/logo.png"
+    alt="Prashant K Gupta & Associates Logo"
+    width={100}
+    height={100}
+  />
 
-          <small style={{ color: "#666" }}>
-            Chartered Accountants
-          </small>
-        </div>
+  <div>
+    <h2
+      style={{
+        color: "#123B73",
+        margin: 0,
+        fontSize: "28px",
+        lineHeight: "1.2",
+      }}
+    >
+      Prashant K Gupta & Associates
+    </h2>
+
+    <small
+      style={{
+        color: "#666",
+        fontSize: "20px",
+        fontWeight: "600",
+        letterSpacing: "0.5px",
+        display: "block",
+marginTop: "4px",
+      }}
+    >
+      Chartered Accountants
+    </small>
+  </div>
+</div>
 
 <button
   onClick={() => setMenuOpen(!menuOpen)}
@@ -69,16 +82,119 @@ export default function Navbar() {
 
 <div
   style={{
-    display: menuOpen ? "flex" : "flex",
+    display: "flex",
     flexDirection: "row",
-    gap: "25px",
+    gap: "35px",
     alignItems: "center",
   }}
 >
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#contact">Contact</a>
+  <a
+  href="#home"
+  style={{
+    textDecoration: "none",
+    color: "#123B73",
+    fontSize: "19px",
+    fontWeight: "600",
+    transition: "all 0.3s ease",
+    padding: "10px 18px",
+    borderRadius: "8px",
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.backgroundColor = "#123B73";
+    e.currentTarget.style.color = "white";
+    e.currentTarget.style.transform = "translateY(-4px)";
+    e.currentTarget.style.boxShadow = "0 8px 20px rgba(18,59,115,0.30)";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.backgroundColor = "transparent";
+    e.currentTarget.style.color = "#123B73";
+    e.currentTarget.style.transform = "translateY(0)";
+    e.currentTarget.style.boxShadow = "none";
+  }}
+>
+  Home
+</a>
+
+  <a
+  href="#about"
+  style={{
+    textDecoration: "none",
+    color: "#123B73",
+    fontSize: "19px",
+    fontWeight: "600",
+    transition: "all 0.3s ease",
+    padding: "10px 18px",
+    borderRadius: "8px",
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.backgroundColor = "#123B73";
+    e.currentTarget.style.color = "white";
+    e.currentTarget.style.transform = "translateY(-4px)";
+    e.currentTarget.style.boxShadow = "0 8px 20px rgba(18,59,115,0.30)";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.backgroundColor = "transparent";
+    e.currentTarget.style.color = "#123B73";
+    e.currentTarget.style.transform = "translateY(0)";
+    e.currentTarget.style.boxShadow = "none";
+  }}
+>
+  About
+</a>
+
+  <a
+  href="#services"
+  style={{
+    textDecoration: "none",
+    color: "#123B73",
+    fontSize: "19px",
+    fontWeight: "600",
+    transition: "all 0.3s ease",
+    padding: "10px 18px",
+    borderRadius: "8px",
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.backgroundColor = "#123B73";
+    e.currentTarget.style.color = "white";
+    e.currentTarget.style.transform = "translateY(-4px)";
+    e.currentTarget.style.boxShadow = "0 8px 20px rgba(18,59,115,0.30)";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.backgroundColor = "transparent";
+    e.currentTarget.style.color = "#123B73";
+    e.currentTarget.style.transform = "translateY(0)";
+    e.currentTarget.style.boxShadow = "none";
+  }}
+>
+  Services
+</a>
+
+  <a
+  href="#contact"
+  style={{
+    textDecoration: "none",
+    color: "#123B73",
+    fontSize: "19px",
+    fontWeight: "600",
+    transition: "all 0.3s ease",
+    padding: "10px 18px",
+    borderRadius: "8px",
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.backgroundColor = "#123B73";
+    e.currentTarget.style.color = "white";
+    e.currentTarget.style.transform = "translateY(-4px)";
+    e.currentTarget.style.boxShadow = "0 8px 20px rgba(18,59,115,0.30)";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.backgroundColor = "transparent";
+    e.currentTarget.style.color = "#123B73";
+    e.currentTarget.style.transform = "translateY(0)";
+    e.currentTarget.style.boxShadow = "none";
+  }}
+>
+  Contact
+</a>
 
           <a
             href="https://wa.me/919111702111"

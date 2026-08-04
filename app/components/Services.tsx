@@ -29,9 +29,13 @@ export default function Services() {
   >
       <div className="max-w-6xl mx-auto px-6">
 
-        <h2 className="text-3xl font-bold text-center text-blue-900 mb-10">
-          Our Services
-        </h2>
+        <div className="flex justify-center mb-10">
+  <h2
+    className="text-5xl font-bold text-blue-900 px-8 py-3 rounded-full border-2 border-yellow-500 transition-all duration-300 hover:bg-yellow-500 hover:text-white cursor-pointer"
+  >
+    Our Services
+  </h2>
+</div>
 
         <div className="grid md:grid-cols-4 gap-6">
 

@@ -6,7 +6,7 @@ export default function Hero() {
     background:
       "linear-gradient(135deg, #123B73 0%, #0B2C59 100%)",
     color: "white",
-    padding: "100px 20px",
+    padding: "120px 20px",
   }}
 >
       <div
@@ -34,7 +34,9 @@ export default function Hero() {
 
           <h1
             style={{
-              fontSize: "54px",
+              fontSize: "52px",
+fontWeight: "750",
+letterSpacing: "-1px",
               margin: "20px 0",
               lineHeight: "1.2",
             }}
@@ -64,6 +66,8 @@ export default function Hero() {
           >
             <a
               href="https://wa.me/919111702111"
+              target="_blank"
+rel="noopener noreferrer"
               style={{
                 background: "#25D366",
                 color: "white",
@@ -99,9 +103,35 @@ export default function Hero() {
               flexWrap: "wrap",
             }}
           >
-            <div>⭐ 5.0 Google Rating</div>
-            <div>👥 1500+ Happy Clients</div>
-            <div>📅 Since 2018</div>
+            <div
+  style={{
+    background: "rgba(255,255,255,0.12)",
+    padding: "10px 18px",
+    borderRadius: "30px",
+  }}
+>
+  ⭐ 5.0 Google Rating
+</div>
+
+<div
+  style={{
+    background: "rgba(255,255,255,0.12)",
+    padding: "10px 18px",
+    borderRadius: "30px",
+  }}
+>
+  👥 3000+ Happy Clients
+</div>
+
+<div
+  style={{
+    background: "rgba(224, 49, 49, 0.12)",
+    padding: "10px 18px",
+    borderRadius: "30px",
+  }}
+>
+  📅 Since 2018
+</div>
           </div>
         </div>
 
@@ -115,10 +145,12 @@ export default function Hero() {
         >
           <div
             style={{
-              background: "rgba(255,255,255,0.08)",
+              background: "rgba(255,255,255,0.12)",
+backdropFilter: "blur(14px)",
+WebkitBackdropFilter: "blur(14px)",
               padding: "70px",
               borderRadius: "20px",
-              border: "2px dashed rgba(255,255,255,0.3)",
+              border: "1px solid rgba(255,255,255,0.25)",
             }}
           >
             <h2 style={{ fontSize: "36px" }}>Our Core Services</h2>

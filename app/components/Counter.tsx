@@ -1,22 +1,26 @@
+"use client";
+
+import { useState } from "react";
+
 export default function Counter() {
-  const stats = [
-    {
-      number: "1500+",
-      title: "Happy Clients",
-    },
-    {
-      number: "5000+",
-      title: "ITR Filed",
-    },
-    {
-      number: "3000+",
-      title: "GST Returns",
-    },
-    {
-      number: "Since 2018",
-      title: "Trusted CA Firm",
-    },
-  ];
+const stats = [
+  {
+    number: "3000+",
+    title: "Happy Clients",
+  },
+  {
+    number: "1500+",
+    title: "ITR Filed",
+  },
+  {
+    number: "500+",
+    title: "GST Returns",
+  },
+  {
+    number: "Since 2018",
+    title: "Trusted CA Firm",
+  },
+];
 
   return (
     <section
@@ -35,37 +39,53 @@ export default function Counter() {
         }}
       >
         {stats.map((item, index) => (
-          <div
-            key={index}
-            style={{
-              textAlign: "center",
-              background: "#F8FAFC",
-              padding: "35px",
-              borderRadius: "15px",
-              boxShadow: "0 5px 15px rgba(0,0,0,0.08)",
-            }}
-          >
-            <h2
-              style={{
-                color: "#123B73",
-                fontSize: "42px",
-                marginBottom: "10px",
-              }}
-            >
-              {item.number}
-            </h2>
-
-            <p
-              style={{
-                color: "#666",
-                fontSize: "18px",
-              }}
-            >
-              {item.title}
-            </p>
-          </div>
+          <CounterCard key={index} item={item} />
         ))}
       </div>
     </section>
+  );
+}
+
+function CounterCard({ item }: any) {
+  const [hover, setHover] = useState(false);
+
+  return (
+    <div
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+      style={{
+        textAlign: "center",
+        background: hover ? "#123B73" : "#F8FAFC",
+        padding: "35px",
+        borderRadius: "15px",
+        boxShadow: hover
+          ? "0 15px 35px rgba(0,0,0,0.25)"
+          : "0 5px 15px rgba(0,0,0,0.08)",
+        transform: hover ? "translateY(-10px)" : "translateY(0)",
+        transition: "all 0.35s ease",
+        cursor: "pointer",
+      }}
+    >
+      <h2
+        style={{
+          color: hover ? "#D4AF37" : "#123B73",
+          fontSize: "42px",
+          marginBottom: "10px",
+          transition: "0.3s",
+        }}
+      >
+        {item.number}
+      </h2>
+
+      <p
+        style={{
+          color: hover ? "white" : "#666",
+          fontSize: "18px",
+          transition: "0.3s",
+        }}
+      >
+        {item.title}
+      </p>
+    </div>
   );
 }
