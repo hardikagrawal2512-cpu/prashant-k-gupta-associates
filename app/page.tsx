@@ -9,12 +9,14 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Counter from "./components/Counter";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
+import HeroBanner from "./components/HeroBanner";
 
 
 export default function Home() {
   return (
     <>
       <Navbar />
+      <HeroBanner/>
       <Hero />
       <Counter />
       <Services />

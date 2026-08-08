@@ -1,217 +1,207 @@
-"use client";
-
-import { useState } from "react";
 import Image from "next/image";
+import {CALogoImage} from '../assets/index'
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
   return (
-     
-    
-    <>
-    
-
-
-      {/* Main Navbar */}
-      <nav
+    <header
+      style={{
+        background: "#ffffff",
+        borderRadius: "0 0 18px 18px",
+        boxShadow: "0 10px 25px rgba(0,0,0,0.12)",
+        position: "sticky",
+        top: 0,
+        zIndex: 1000,
+      }}
+    >
+      <div
         style={{
+          maxWidth: "1350px",
+          margin: "0 auto",
+          height: "95px",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          padding: "20px",
-          background: "white",
-          boxShadow: "0 2px 10px rgba(0,0,0,0.08)",
-          position: "sticky",
-          top: 0,
-          zIndex: 1000,
+          padding: "0 30px",
         }}
       >
+                {/* Left Side */}
         <div
-  style={{
-    display: "flex",
-    alignItems: "center",
-    gap: "20px",
-  }}
->
-  <Image
-    src="/images/logo.png"
-    alt="Prashant K Gupta & Associates Logo"
-    width={100}
-    height={100}
-  />
-
-  <div>
-    <h2
-      style={{
-        color: "#123B73",
-        margin: 0,
-        fontSize: "28px",
-        lineHeight: "1.2",
-      }}
-    >
-      Prashant K Gupta & Associates
-    </h2>
-
-    <small
-      style={{
-        color: "#666",
-        fontSize: "20px",
-        fontWeight: "600",
-        letterSpacing: "0.5px",
-        display: "block",
-marginTop: "4px",
-      }}
-    >
-      Chartered Accountants
-    </small>
-  </div>
-</div>
-
-<button
-  onClick={() => setMenuOpen(!menuOpen)}
-  style={{
-    display: "none",
-    fontSize: "30px",
-    background: "none",
-    border: "none",
-    cursor: "pointer",
-    color: "#123B73",
-  }}
->
-  ☰
-</button>
-
-<div
-  style={{
-    display: "flex",
-    flexDirection: "row",
-    gap: "35px",
-    alignItems: "center",
-  }}
->
-  <a
-  href="#home"
-  style={{
-    textDecoration: "none",
-    color: "#123B73",
-    fontSize: "19px",
-    fontWeight: "600",
-    transition: "all 0.3s ease",
-    padding: "10px 18px",
-    borderRadius: "8px",
-  }}
-  onMouseEnter={(e) => {
-    e.currentTarget.style.backgroundColor = "#123B73";
-    e.currentTarget.style.color = "white";
-    e.currentTarget.style.transform = "translateY(-4px)";
-    e.currentTarget.style.boxShadow = "0 8px 20px rgba(18,59,115,0.30)";
-  }}
-  onMouseLeave={(e) => {
-    e.currentTarget.style.backgroundColor = "transparent";
-    e.currentTarget.style.color = "#123B73";
-    e.currentTarget.style.transform = "translateY(0)";
-    e.currentTarget.style.boxShadow = "none";
-  }}
->
-  Home
-</a>
-
-  <a
-  href="#about"
-  style={{
-    textDecoration: "none",
-    color: "#123B73",
-    fontSize: "19px",
-    fontWeight: "600",
-    transition: "all 0.3s ease",
-    padding: "10px 18px",
-    borderRadius: "8px",
-  }}
-  onMouseEnter={(e) => {
-    e.currentTarget.style.backgroundColor = "#123B73";
-    e.currentTarget.style.color = "white";
-    e.currentTarget.style.transform = "translateY(-4px)";
-    e.currentTarget.style.boxShadow = "0 8px 20px rgba(18,59,115,0.30)";
-  }}
-  onMouseLeave={(e) => {
-    e.currentTarget.style.backgroundColor = "transparent";
-    e.currentTarget.style.color = "#123B73";
-    e.currentTarget.style.transform = "translateY(0)";
-    e.currentTarget.style.boxShadow = "none";
-  }}
->
-  About
-</a>
-
-  <a
-  href="#services"
-  style={{
-    textDecoration: "none",
-    color: "#123B73",
-    fontSize: "19px",
-    fontWeight: "600",
-    transition: "all 0.3s ease",
-    padding: "10px 18px",
-    borderRadius: "8px",
-  }}
-  onMouseEnter={(e) => {
-    e.currentTarget.style.backgroundColor = "#123B73";
-    e.currentTarget.style.color = "white";
-    e.currentTarget.style.transform = "translateY(-4px)";
-    e.currentTarget.style.boxShadow = "0 8px 20px rgba(18,59,115,0.30)";
-  }}
-  onMouseLeave={(e) => {
-    e.currentTarget.style.backgroundColor = "transparent";
-    e.currentTarget.style.color = "#123B73";
-    e.currentTarget.style.transform = "translateY(0)";
-    e.currentTarget.style.boxShadow = "none";
-  }}
->
-  Services
-</a>
-
-  <a
-  href="#contact"
-  style={{
-    textDecoration: "none",
-    color: "#123B73",
-    fontSize: "19px",
-    fontWeight: "600",
-    transition: "all 0.3s ease",
-    padding: "10px 18px",
-    borderRadius: "8px",
-  }}
-  onMouseEnter={(e) => {
-    e.currentTarget.style.backgroundColor = "#123B73";
-    e.currentTarget.style.color = "white";
-    e.currentTarget.style.transform = "translateY(-4px)";
-    e.currentTarget.style.boxShadow = "0 8px 20px rgba(18,59,115,0.30)";
-  }}
-  onMouseLeave={(e) => {
-    e.currentTarget.style.backgroundColor = "transparent";
-    e.currentTarget.style.color = "#123B73";
-    e.currentTarget.style.transform = "translateY(0)";
-    e.currentTarget.style.boxShadow = "none";
-  }}
->
-  Contact
-</a>
-
-          <a
-            href="https://wa.me/919111702111"
-            target="_blank"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "18px",
+          }}
+        >
+          {/* Logo */}
+          <Image
+            src="/images/newlogo.png"
+            alt="Prashant K Gupta & Associates"
+            width={95}
+            height={95}
             style={{
-              background: "#25D366",
-              color: "white",
-              padding: "10px 14px",
-              borderRadius: "8px",
+              width: "95px",
+              height: "auto",
+            }}
+          />
+          {/* <Image
+            src={CALogoImage}
+            alt="Prashant K Gupta & Associates"
+            width={95}
+            style={{
+              width: "95px",
+              height: "auto",
+            }}
+          /> */}
+          {/* Gold Vertical Line */}
+          <div
+            style={{
+              width: "2px",
+              height: "60px",
+              background: "#C89B2D",
+            }}
+          />
+
+          {/* Firm Name */}
+          <div>
+            <h1
+              style={{
+                margin: 0,
+                color: "#0B2C59",
+                fontSize: "26px",
+                fontWeight: 700,
+                lineHeight: "1.1",
+                letterSpacing: "1px",
+                textTransform: "uppercase",
+                fontFamily: "Georgia, serif",
+              }}
+            >
+              PRASHANT K GUPTA
+            </h1>
+
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "14px",
+                marginTop: "2px",
+              }}
+            >
+              <div
+                style={{
+                  width: "50px",
+                  height: "2px",
+                  background: "#C89B2D",
+                }}
+              />
+
+              <span
+                style={{
+                  color: "#0B2C59",
+                  fontSize: "22px",
+                  fontWeight: 700,
+                  letterSpacing: "4px",
+                  fontFamily: "Georgia, serif",
+                }}
+              >
+                & ASSOCIATES
+              </span>
+
+              <div
+                style={{
+                  width: "50px",
+                  height: "2px",
+                  background: "#C89B2D",
+                }}
+              />
+            </div>
+
+            <p
+              style={{
+                margin: "8px 0 0",
+                color: "#B8860B",
+                fontSize: "14px",
+                fontWeight: 700,
+                letterSpacing: "5px",
+                textTransform: "uppercase",
+              }}
+            >
+              Chartered Accountants
+            </p>
+          </div>
+          </div>
+
+        {/* Right Side */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "35px",
+          }}
+        >
+          <a
+            href="#"
+            style={{
+              color: "#0B2C59",
               textDecoration: "none",
+              fontSize: "16px",
+              fontWeight: 600,
             }}
           >
-            WhatsApp
+            Home
           </a>
-        </div>
-      </nav>
-    </>
+
+          <a
+            href="#about-us"
+            style={{
+              color: "#0B2C59",
+              textDecoration: "none",
+              fontSize: "16px",
+              fontWeight: 600,
+            }}
+          >
+            About Us
+          </a>
+
+          <a
+            href="#services"
+            style={{
+              color: "#0B2C59",
+              textDecoration: "none",
+              fontSize: "16px",
+              fontWeight: 600,
+            }}
+          >
+            Services
+          </a>
+
+          <a
+            href="#contact"
+            style={{
+              color: "#0B2C59",
+              textDecoration: "none",
+              fontSize: "16px",
+              fontWeight: 600,
+            }}
+          >
+            Contact
+          </a>
+
+          <a
+            href="tel:+919111702111"
+            style={{
+              background: "rgb(37, 219, 71)",
+              color: "#ffffff",
+              padding: "12px 22px",
+              borderRadius: "30px",
+              textDecoration: "none",
+              fontSize: "15px",
+              fontWeight: 700,
+            }}
+          >
+            Whatsapp
+          </a>
+                  </div>
+      </div>
+    </header>
   );
 }

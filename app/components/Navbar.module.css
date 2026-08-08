@@ -1,0 +1,110 @@
+.navbar{
+    position: sticky;
+    top:0;
+    z-index:1000;
+    background:#fff;
+    box-shadow:0 2px 12px rgba(0,0,0,.08);
+}
+
+.container{
+    max-width:1300px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 25px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.logoText h2{
+    margin:0;
+    color:#123B73;
+    font-size:28px;
+    line-height:1.2;
+}
+
+.logoText p{
+    margin-top:4px;
+    color:#666;
+    font-size:18px;
+    font-weight:600;
+}
+
+.menu{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+.menu a{
+    text-decoration:none;
+    color:#123B73;
+    font-size:18px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.menu a:hover{
+    color:#0B2C59;
+}
+
+.whatsapp{
+    background:#25D366;
+    color:white!important;
+    padding:12px 18px;
+    border-radius:8px;
+}
+
+.mobileMenu{
+    display:none;
+    font-size:34px;
+    cursor:pointer;
+    color:#123B73;
+}
+
+@media(max-width:768px){
+
+.container{
+    padding:15px;
+}
+
+.logo img{
+    width:55px;
+    height:55px;
+}
+
+.logoText h2{
+    font-size:18px;
+}
+
+.logoText p{
+    font-size:13px;
+}
+
+.mobileMenu{
+    display:block;
+}
+
+.menu{
+    display:none;
+}
+
+.menu.active{
+    display:flex;
+    flex-direction:column;
+    position:absolute;
+    top:85px;
+    left:0;
+    width:100%;
+    background:white;
+    padding:20px;
+    gap:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+}

@@ -1,8 +1,8 @@
 export default function About() {
   return (
     <section
-  id="about"
-  style={{
+    id="about-us"
+    style={{
     padding: "80px 40px",
     background: "#f8f9fc",
   }}
